@@ -5,7 +5,7 @@ Summary:        Lightning-fast and Powerful Code Editor written in Rust
 License:        Apache-2.0
 URL:            https://github.com/lapce/lapce
 Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel gcc g++ perl-lib perl-File-Compare
+BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel gcc g++ perl-lib perl-File-Compare mold
 
 %description
 Lapce is written in pure Rust, with the UI in Druid. It uses Xi-Editor's Rope
@@ -15,7 +15,7 @@ Science for text editing, and the Wgpu Graphics API for rendering.
 %autosetup
 
 %build
-cargo build --profile release-lto
+cargo build --profile release-lto -Clink-arg=-fuse-ld=/usr/bin/mold
 
 %install
 install -Dm755 target/release-lto/%{name} %{buildroot}%{_bindir}/%{name}
