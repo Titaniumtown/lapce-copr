@@ -22,7 +22,7 @@ install -Dm755 target/release-lto/%{name} %{buildroot}%{_bindir}/%{name}
 install -Dm755 target/release-lto/%{name}-proxy %{buildroot}%{_bindir}/%{name}-proxy
 install -Dm755 extra/linux/dev.lapce.lapce.desktop %{buildroot}/usr/share/applications/dev.lapce.lapce.desktop
 install -Dm766 extra/linux/dev.lapce.lapce.metainfo.xml %{buildroot}/usr/share/metainfo/dev.lapce.lapce.metainfo.xml
-
+install -Dm766 extra/images/logo.png %{buildroot}/usr/share/pixmaps/dev.lapce.lapce.png
 
 %files
 %license LICENSE*
@@ -31,6 +31,7 @@ install -Dm766 extra/linux/dev.lapce.lapce.metainfo.xml %{buildroot}/usr/share/m
 %{_bindir}/%{name}-proxy
 /usr/share/applications/dev.lapce.lapce.desktop
 /usr/share/metainfo/dev.lapce.lapce.metainfo.xml
+/usr/share/pixmaps/dev.lapce.lapce.png
 
 %changelog
 * Fri Jul 15 2022 Simon Gardling <titaniumtown@gmail.com> - 0.1.3
