@@ -21,7 +21,7 @@ cargo build --profile release-lto
 install -Dm755 target/release-lto/%{name} %{buildroot}%{_bindir}/%{name}
 install -Dm755 target/release-lto/%{name}-proxy %{buildroot}%{_bindir}/%{name}-proxy
 install -Dm755 extra/linux/dev.lapce.lapce.desktop %{buildroot}/usr/share/applications/dev.lapce.lapce.desktop
-install -Dm766 extra/linux/dev.lapce.lapce.metadata.xml %{buildroot}/usr/share/metainfo/dev.lapce.lapce.metadata.xml
+install -Dm766 extra/linux/dev.lapce.lapce.metainfo.xml %{buildroot}/usr/share/metainfo/dev.lapce.lapce.metainfo.xml
 
 
 %files
@@ -30,7 +30,7 @@ install -Dm766 extra/linux/dev.lapce.lapce.metadata.xml %{buildroot}/usr/share/m
 %{_bindir}/%{name}
 %{_bindir}/%{name}-proxy
 /usr/share/applications/dev.lapce.lapce.desktop
-/usr/share/metainfo/dev.lapce.lapce.metadata.xml
+/usr/share/metainfo/dev.lapce.lapce.metainfo.xml
 
 %changelog
 * Fri Jul 15 2022 Simon Gardling <titaniumtown@gmail.com> - 0.1.3
