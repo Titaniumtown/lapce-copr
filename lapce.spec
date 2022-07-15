@@ -8,8 +8,8 @@ Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar
 BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel gcc g++ perl-lib perl-File-Compare
 
 %description
-Lapce is written in pure Rust, with the UI in Druid. It uses Xi-Editor's Rope
-Science for text editing, and the Wgpu Graphics API for rendering.
+Lapce is written in pure Rust with a UI in Druid (which is also written in Rust).
+It is designed with Rope Science from the Xi-Editor which makes for lightning-fast computation, and leverages OpenGL for rendering.
 
 %prep
 %autosetup
