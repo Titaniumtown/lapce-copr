@@ -1,11 +1,11 @@
 Name:           lapce
 Version:        0.1.3
-Release:        2
+Release:        3
 Summary:        Lightning-fast and Powerful Code Editor written in Rust
 License:        Apache-2.0
 URL:            https://github.com/lapce/lapce
 Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel gcc g++ perl-lib perl-File-Compare
+BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel gcc g++ perl-lib perl-File-Compare mold
 
 %description
 Lapce is written in pure Rust with a UI in Druid (which is also written in Rust).
@@ -15,7 +15,7 @@ It is designed with Rope Science from the Xi-Editor which makes for lightning-fa
 %autosetup
 
 %build
-cargo build --profile release-lto
+RUSTFLAGS="-C link-arg=-fuse-ld=/usr/bin/mold" cargo build --profile release-lto
 
 %install
 install -Dm755 target/release-lto/%{name} %{buildroot}%{_bindir}/%{name}
