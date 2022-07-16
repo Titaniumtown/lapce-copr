@@ -1,6 +1,6 @@
 Name:           lapce
 Version:        0.1.3
-Release:        1
+Release:        2
 Summary:        Lightning-fast and Powerful Code Editor written in Rust
 License:        Apache-2.0
 URL:            https://github.com/lapce/lapce
