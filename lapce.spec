@@ -1,5 +1,5 @@
 Name:           lapce
-Version:        0.2.1
+Version:        0.2.3
 Release:        1
 Summary:        Lightning-fast and Powerful Code Editor written in Rust
 License:        Apache-2.0
@@ -39,3 +39,4 @@ install -Dm766 extra/images/logo.png %{buildroot}/usr/share/pixmaps/dev.lapce.la
 
 * Sun Sep 4 2022 Simon Gardling <titaniumtown@gmail.com> - 0.2.0
 * Sun Oct 18 2022 Simon Gardling <titaniumtown@gmail.com> - 0.2.1
+* Fri Nov 11 2022 Simon Gardling <titaniumtown@gmail.com> - 0.2.3
