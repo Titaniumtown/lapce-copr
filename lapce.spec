@@ -1,11 +1,11 @@
 Name:           lapce
-Version:        0.2.7
+Version:        0.2.8
 Release:        1
 Summary:        Lightning-fast and Powerful Code Editor written in Rust
 License:        Apache-2.0
 URL:            https://github.com/lapce/lapce
 Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar.gz
-BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel perl-lib perl-File-Compare pkg-config openssl-devel mold clang
+BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel perl-lib perl-File-Compare pkg-config openssl-devel mold clang libxkbcommon-x11-devel 
 
 %description
 Lapce is written in pure Rust with a UI in Druid (which is also written in Rust).
