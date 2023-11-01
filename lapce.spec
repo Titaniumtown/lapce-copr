@@ -1,5 +1,5 @@
 Name:           lapce
-Version:        0.2.8
+Version:        0.3.0
 Release:        1
 Summary:        Lightning-fast and Powerful Code Editor written in Rust
 License:        Apache-2.0
@@ -8,8 +8,8 @@ Source0:        https://github.com/lapce/lapce/archive/refs/tags/v%{version}.tar
 BuildRequires:  cargo perl-FindBin cairo-devel cairo-gobject-devel atk-devel gdk-pixbuf2-devel pango-devel gtk3-devel perl-lib perl-File-Compare pkg-config openssl-devel mold clang libxkbcommon-x11-devel 
 
 %description
-Lapce is written in pure Rust with a UI in Druid (which is also written in Rust).
-It is designed with Rope Science from the Xi-Editor which makes for lightning-fast computation, and leverages OpenGL for rendering.
+Lapce (IPA: /læps/) is written in pure Rust with a UI in Floem. It is designed with Rope Science from the Xi-Editor which makes for lightning-fast computation, and leverages Wgpu for rendering.
+
 
 %prep
 %autosetup
@@ -43,3 +43,4 @@ install -Dm766 extra/images/logo.png %{buildroot}/usr/share/pixmaps/dev.lapce.la
 * Fri Nov 18 2022 Simon Gardling <titaniumtown@gmail.com> - 0.2.4
 * Wed Dec 14 2022 Simon Gardling <titaniumtown@gmail.com> - 0.2.5
 * Wed Mar 22 2023 Simon Gardling <titaniumtown@gmail.com> - 0.2.7
+* Wed Nov 1 2023 Simon Gardling <titaniumtown@proton.me> - 0.3.0
